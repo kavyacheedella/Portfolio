@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"  href="style.css">
+            
+      <title>My protofolio</title>
+      <style>
+            *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+	          list-style:none;
+	          text-decoration:none;
+            }
+
+
+          .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width:100%;
+            padding:22px 12%;
+            background:rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+          }
+
+       .logo{
+            font-size: 22px;
+            color: white;
+            font-weight: 600;
+            transition: 0.3s ease;
+            }
+
+       .logo:hover{
+    
+              color: orangered;
+              text-shadow: 0 0 25px orangered,
+                           0 0 50px orangered;
+              transform:scale(1.1);
+
+            }
+
+        span{
+              color: orangered;
+           }
+
+
+
+        .navbar a{
+         font-size: 18px;
+         color: white;
+         font-weight: 500;
+         margin:0 20px;
+         border-bottom: 3px solid transparent;
+         transition: 0.3s ease;
+
+           
+        }
+
+          .navbar a:hover{
+            color: orangered;
+            border-bottom: 3px solid orangered;
+          }
+
+          .navbar a.active{
+            color: orangered;
+            border-bottom: 3px solid orangered;
+           }
+
+          .contact{
+            padding:10px 28px;
+            background-color: white;
+            color: black;
+            border:2px solid transparent;
+            border-radius: 8px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: 0.3s ease;
+            }
+
+          .contact:hover{
+           background-color: orangered;
+           box-shadow: 0 0 25px orangered,
+                       0 0 50px  orangered;
+           color: white;
+           }
+
+           .home{
+            width: 100%;
+            min-height: 100vh;
+            background: rgb(14, 4, 4);
+            display: flex;
+            align-items: center;
+            gap:7em;
+            color: white;
+            padding: 30px 12% 0;
+
+           }
+
+            .home-content{
+            max-width: 800px;
+           }
+
+           .home-content h3{
+            font-size: 42px;
+           }
+
+           .home-content h1{
+           font-size: 52px;
+           line-height: 1.2;
+           letter-spacing: 1px;
+          }
+
+         .home-content p{
+            font-size: 18px;
+            font-style: bold;
+            font-weight: 200;
+            margin:25px 0 30px;
+            text-align: justify;
+            }
+
+        .btn-box{
+            width:345px;
+            display:flex;
+            gap:2em;
+            }
+
+          .btn-1{
+            padding:15px 28px;
+            background-color:orangered;
+            color: white;
+            border:2px solid transparent;
+            border-radius: 8px;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight:600 ;
+           transition: 0.3s ease;
+           cursor: pointer;
+         }
+
+         .btn-1:hover{
+            background-color: white;
+            color: black;
+            border:2px solid black;
+
+            }
+
+          .btn-2{
+           padding:15px 28px;
+           background-color: orangered;
+           color: white;
+           border:2px solid black;
+            border-radius: 8px;
+           font-size: 18px;
+            letter-spacing: 1px;
+           font-weight:600 ;
+            transition: 0.3s ease;
+            cursor: pointer;
+           }
+
+           .btn-2:hover{
+            background-color: white;
+            color:black;
+            }
+
+           .img-box img{
+             border-radius: 30%;
+              width:500px;
+              box-shadow: 0 0 25px orangered;
+            }
+
+            
+         ::-webkit-scrollbar{
+                 width:15px;
+            }
+
+          ::-webkit-scrollbar-thumb{
+             background-color: orangered;
+            }
+
+            ::-webkit-scrollbar-track{
+              background-color: rgba(0, 0, 0, 0.60);
+               width:50%;
+            }
+
+           .heading{
+            text-align:center;
+            font-size:45px;
+            margin: 5rem 0;
+            color: white;
+           }
+
+           .education{
+            padding:100px 15px;
+            background:rgb(14, 4, 4);
+
+           }
+
+           .education h2{
+            margin-bottom: 5rem;
+           }
+
+           .timeline-items{
+            margin: auto;
+            max-width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            position:relative;
+
+           }
+          
+           .timeline-items::before{
+            position: absolute;
+            width: 5px;
+            background-color:orangered;
+            height:100%;
+            left:clac(50% - 1px);
+
+           }
+
+          
+           .timeline-item{
+            width: 100%;
+            position: relative;
+
+           }
+
+
+           .timeline-item:nth-child(odd){
+            padding-right: clac(50% +30px);
+            text-align: left;
+           }
+
+           .timeline-item:nth-child(even){
+            padding-left: clac(50% +30px);
+           }
+           
+           .timeline-dot{
+            height: 21px;
+            width: 21px;
+
+            background-color:orangered;
+
+            box-shadow: 0 0 25px orangered,
+                        0 0 50px orangered;
+            position: absolute;
+            left:calc(50% - 8px);
+            border-radius: 50%;
+            top:10px;
+           }
+
+           .timeline-date{
+            font-size: 20px;
+            font-weight: 800;
+            color: white;
+            margin: 6px 0 15px;
+          }
+
+          .timeline-content{
+            background-color: black;
+            border: 3px solid orangered;
+
+            padding: 30px 50px;
+            border-radius: 4rem;
+            box-shadow: 0 0 10px orangered;
+            transition: 0.3s ease-in-out;
+          }
+
+          .timeline-content:hover{
+            transform:scale(1.05);
+            box-shadow: 0 0 25px orangered;
+          }
+
+          .timeline-content h3{
+            font-size: 20px;
+            color: white;
+            margin: 0 0 10px;
+            font-weight: 500;
+          }
+
+          .timeline-content p{
+            font-size: 16px;
+            font-weight: 300;
+            color: white;
+            line-height: 22px;
+          }
+          
+            
+          .projects{ 
+              background:rgb(14, 4, 4) ;
+
+            }
+
+          .about-project h1 {
+              text-align: center;
+              color:white;
+              font-size: 45px;
+              margin-bottom: 50px;
+              padding-bottom: 50px;
+              padding-top: 50px;
+            }
+
+          .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 40px;
+           }
+
+        .project {
+           border: 2px solid orangered;
+           box-shadow: 0 0 10px orangered;
+           border-radius: 25%;
+           padding: 20px;
+           color: white;
+           letter-spacing: 0.5px;
+           height: 60vh;
+           align-content: center;
+           background-color: #1d1c1c;
+           transition: transform 0.3s, box-shadow 0.3s;
+          }
+
+        .project h2 {
+           color: orangered;
+           margin-bottom: 20px ;
+            }
+
+         .project ul {
+           padding-left: 20px;
+           margin-bottom: 20px;
+          }
+
+          .project p, .project ul {
+           margin-bottom: 10px;
+           letter-spacing: 1px;
+          }
+
+          .project:hover {
+             transform: translateY(-10px);
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .my-skills{
+              background:rgb(14, 4, 4);
+              width: 100%;
+            }
+            
+            .about-skills {
+              text-align:center;
+              color: white;
+              font-size:55px ;
+              padding-bottom: 50px;
+              padding-top: 80px;
+              margin-bottom: 50px;
+            }
+
+            .about-hobbies{
+              text-align: center;
+              color: white;
+              font-size:55px ;
+              padding-bottom: 50px;
+              padding-top: 60px;
+
+            }
+            .skills, .hobbies {
+              height: 100%;
+              padding-top: 50px;
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              place-items:center ;
+              grid-gap: 60px;
+              align-content: center;
+              align-items: center;
+              margin-bottom: 60px;
+              padding-bottom: 50px;
+              
+            
+             }
+
+           .skill, .hobby {
+              display:absolute;
+              flex-direction: row;
+              width: 70%;
+              align-items: center;
+              border: 2px solid orangered;
+              box-shadow:0 0 10px orangered;
+              padding: 20px;
+              border-radius: 25%;
+              background-color: #1d1c1c;
+              transition: transform 0.3s, box-shadow 0.3s;
+              border-radius: 10px;
+            }
+
+          .skill h2, .hobby h2 {
+               color: orangered;
+               margin-top: 0;
+            }
+
+           .skill p, .hobby p {
+            color:white;
+           }
+
+          .skill:hover, .hobby:hover {
+             transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+             }
+
+           .contacts{
+            background: rgb(14,4,4);
+           }
+
+           .contact-me{
+            padding-bottom: 30px;
+            padding-top: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 55px;
+            color: white;
+           }
+
+           .contact-section {
+           max-width: 900px;
+           color: white;
+           border-radius: 10px;
+           background-color:transparent
+           }
+
+           .contact-form {
+            display: flex;
+            flex-direction: column;
+           }
+
+           .form-group {
+            margin-bottom: 20px;
+            color: white;
+           }
+
+           .form-group label {
+            margin-bottom: 5px;
+            font-weight: bold;
+           }
+
+           .form-group input,
+           .form-group textarea {
+            width: 100%;
+            align-items: center;
+            padding: 10px;
+            box-shadow: 0 4px 8px orangered;
+            color: #fff;
+            background: #1d1c1c;
+            border: 1px solid orangered;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+            }
+
+           .form-group input:focus,
+           .form-group textarea:focus {
+           border-color: orangered;
+
+           }
+
+           button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: orangered;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+           }
+
+           button:hover {
+            background-color: orangered;
+          }
+
+          .footer {
+           width: 60%;
+           place-items: center;
+           padding-top: 50px;
+           padding-left: 400px;
+           background:transparent;
+           color: #fff;
+           text-align: center;
+           position: relative;
+           bottom: 100%;
+          }
+
+          .footer p {
+            place-items: center;
+           margin: 5px 0;
+          }
+
+         .social-media {
+           margin-top: 10px;
+          }
+
+         .social-media a {
+          color: #fff;
+          margin: 0 10px;
+          text-decoration: none;
+          transition: color 0.3s;
+         }
+
+         .social-media a:hover {
+         color: orangered;
+        }
+
+ </style>
+</head>
+<body>
+      <header class="header">
+            <a href="#" class="logo"><span>Kav</span>ya</a>
+            <nav class="navbar">
+                     <a href="#" class="active">Home</a>
+                     <a href="#">Education</a>
+                     <a href="#">Projects</a>
+                    <a href="#">Skills</a>
+                    <a href="#">Contact</a>
+            </nav>
+
+            <a href="#" class="contact">Contact Me</a>
+      </header>
+
+      <section class="home">
+            <div class="home-content">
+                  <h3>Hi!</h3>
+
+                  <h1>I'am<span>Kavya<br></span>Student</h1>
+
+                  <p>Hello! I am a fourth-year B.Tech student specializing in Electronics 
+                  and Communication Engineering (ECE). My academic journey has equipped 
+                  me with a strong foundation in electronic circuits, communication
+                  systems. Alongside my core studies, I have developed a keen interest
+                  in web design and development.
+                  </p>
+                  <div class="btn-box">
+
+                        <button class="btn-1">Hire Me</button>
+                        <button class="btn-2">Let's Talk</button>
+
+                  </div>
+               </div>
+
+            <div class="img-box">
+
+                  <img src="https://4kwallpapers.com/images/wallpapers/woman-beautiful-portrait-black-background-fair-3655x2295-1525.jpg" alt="">
+
+            </div>
+  </section>
+
+    <section class="education"  id="education">
+            <h2 class="heading">Education</h2>
+
+            <div class="timeline-items">
+
+
+              <div class="timeline-item">
+                 <div class="timeline-dot"></div>
+                    <div class="timeline-date">Starting Year:2018</div>
+                      <div class="timeline-content">
+                        <h3>Secondary School Education (10th Grade):</h3>
+                        <p>School: Zilla Parishad High School (ZPHS), Vemavaram<br>
+                           Year of Completion: 2019 </p>
+                      </div>
+               </div>
+
+               <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                    <div class="timeline-date">Starting Year:2020</div>
+                      <div class="timeline-content">
+                        <h3>Pre-University Course(PUC)-1:</h3>
+                        <p>Institution: Rajiv Gandhi University of Knowledge Technologies (RGUKT), Nuzvid<br>
+                          Year of Completion (1st Year): 2021 </p> 
+                      </div>    
+               </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                    <div class="timeline-date">Starting Year:2021</div>
+                      <div class="timeline-content">
+                        <h3>Pre-University Course(PUC)-2:</h3>
+                        <p> Institution: Rajiv Gandhi University of Knowledge Technologies (RGUKT), Nuzvid<br>
+                          Year of Completion (1st Year): 2022  </p>
+                      </div> 
+               </div>
+
+               <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                    <div class="timeline-date">Starting Year:2022</div>
+                      <div class="timeline-content">
+                        <h3>Undergraduate Education (B.Tech in ECE):</h3>
+                       <p>Institution:Rajiv Gandhi University of Knowledge Technologies (RGUKT), Nuzvid<br>
+                        Year of Enrollment: 2022<br>
+                        Expected Year of Graduation: 2025</p>
+                     </div>
+               </div>
+           </div>
+    </section>
+
+    <section class="projects" id="projects">
+          <div class="about-project">
+            <h1>Projects</h1>
+              <div class="projects-grid">
+                  <div class="project">
+                      <h2>Smart Home Automation System</h2>
+                      <p>Developed a smart home automation system using Arduino and various sensors to control home appliances.</p>
+                      <ul>
+                          <li><b>Lighting Control:</b> Automatic adjustment of lighting based on ambient light levels.</li>
+                          <li><b>Temperature Regulation:</b> Automated control of heating and cooling systems using temperature sensors.</li>
+                          <li><b>Security:</b> Integration of motion detectors and door sensors for enhanced home security.</li>
+                          <li><b>Remote Access:</b> Controlled via a mobile app for remote monitoring and control.</li>
+                      </ul>
+                      <p><strong>Technologies Used:</strong> Arduino, IoT, Sensors (temperature, motion, light), Mobile App Development.</p>
+                  </div>
+                  <div class="project">
+                      <h2>Real-Time Object Detection Using YOLOv8</h2>
+                      <p>Implemented a real-time object detection system using YOLOv8 (You Only Look Once version 8).</p>
+                      <ul>
+                          <li><b>Dataset Preparation:</b> Collected and annotated a custom dataset for various objects.</li>
+                          <li><b>Model Training:</b>Trained the YOLOv8 model using the annotated dataset.</li>
+                          <li><b>Real-Time Detection:</b> Developed a Python application to perform real-time object detection using a webcam feed.</li>
+                          <li><b>Performance Optimization:</b> Enhanced the model for faster processing and higher accuracy.</li>
+                      </ul>
+                      <p><strong>Technologies Used:</strong> Python, YOLOv8, OpenCV, Machine Learning.</p>
+                  </div>
+                  <div class="project">
+                      <h2>Wireless Health Monitoring System</h2>
+                      <p>Created a wireless health monitoring system to track vital signs such as heart rate and body temperature.</p>
+                      <ul>
+                          <li><b>Wearable Device:</b> A wearable sensor module to collect health data.</li>
+                          <li><b>Data Transmission:</b> Wireless transmission of data to a central monitoring unit.</li>
+                          <li><b>Data Analysis:</b> Real-time analysis and visualization of health metrics.</li>
+                          <li><b>Alert System:</b> Automated alerts for abnormal readings sent to healthcare providers.</li>
+                      </ul>
+                      <p><strong>Technologies Used:</strong> Microcontroller (e.g., ESP8266), Wireless Communication, Sensors (heart rate, temperature), Data Visualization.</p>
+                  </div>
+                  <div class="project">
+                      <h2>FPGA-Based Digital Signal Processing</h2>
+                      <p>Designed and implemented digital signal processing (DSP) algorithms on an FPGA for real-time signal processing applications.</p>
+                      <ul>
+                          <li><b>Algorithm Design:</b> Developed DSP algorithms such as filters and FFT.</li>
+                          <li><b>FPGA Implementation:</b> Used VHDL/Verilog to implement the algorithms on an FPGA board.</li>
+                          <li><b>Performance Analysis:</b> Evaluated the performance of the FPGA-based implementation compared to software-based solutions.</li>
+                          <li><b>Application:</b> Applied the system to process audio signals in real-time.</li>
+                      </ul>
+                      <p><strong>Technologies Used:</strong> FPGA (e.g., Xilinx, Altera), VHDL/Verilog, Digital Signal Processing, MATLAB.</p>
+                  </div>
+              </div>
+          </div>
+
+  <section class="my-skills">
+      <h1 class="about-skills">Skills</h1>
+          <div class="skills">
+                        <div class="skill">
+                            <h2>Web Design</h2>
+                          <p>Proficient in HTML, CSS, JavaScript, and responsive design.</p>
+                        </div>
+                        <div class="skill">
+                             <h2>Programming Languages</h2>
+                            <p>Experienced in C, Python, and Java.</p>
+                         </div>
+                         <div class="skill">
+                             <h2>Embedded Systems</h2>
+                             <p>Knowledgeable in Arduino, Raspberry Pi, and microcontrollers.</p>
+                         </div>
+                        <div class="skill">
+                            <h2>Machine Learning</h2>
+                           <p>Familiar with machine learning algorithms and tools such as TensorFlow and Keras.</p>
+                         </div>
+                    </div>
+  
+                    <h1 class="about-hobbies">Hobbies</h1>
+                        <div class="hobbies">
+                              <div class="hobby">
+                              <h2>Photography</h2>
+                               <p>Enjoy capturing landscapes and portraits.</p>
+                              </div>
+                              <div class="hobby">
+                             <h2>Reading</h2>
+                             <p>Love reading science fiction and technology blogs.</p>
+                             </div>
+                             <div class="hobby">
+                              <h2>Gaming</h2>
+                              <p>Passionate about playing strategy and simulation games.</p>
+                             </div>
+                              <div class="hobby">
+                             <h2>Traveling</h2>
+                             <p>Enthusiastic about exploring new places and cultures.</p>
+                             </div>
+                        </div>
+     </section>
+
+
+      <section class="contacts">
+
+          <h1 class="contact-me">Contact</h1>
+                 <div class="contact-section">
+                    <form class="contact-form">
+                    <div class="form-group">
+                       <label for="name">Name:</label>
+                       <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                       <label for="email">Email:</label>
+                       <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+
+                       <label for="phone-no">Phone-no:</label>
+                       <input type="phone-no:" id="phone-no" name="phone-no" required>
+
+                    </div>
+                    <div class="form-group">
+                       <label for="message">Message:</label>
+                      <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                     <button type="submit">Submit</button>
+                   </form>
+               </div>
+     <footer class="footer">
+     <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+      <p>E-mail: kavyacheedella64@gmail.com</p>
+      <div class="social-media">
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+          <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+      </div>
+     </footer>
+      </section>
+  </section>
+</body>
+</html>
